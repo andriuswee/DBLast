@@ -1,0 +1,86 @@
+﻿Azure Commands, to create Tables:
+
+Table create Student:
+
+CREATE TABLE Student (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Surname VARCHAR(50) NOT NULL,
+    DateOfBirth DATE NOT NULL
+);
+
+
+Table create Lecture:
+
+CREATE TABLE Lecture (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Department VARCHAR(50) NOT NULL
+);
+
+
+Table create Department:
+
+CREATE TABLE Department (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    City VARCHAR(50) NOT NULL,
+    Address VARCHAR(100) NOT NULL,
+    Students INT NOT NULL,
+    Lectures INT NOT NULL
+);
+
+
+///---///---///
+
+Info to PUSH:
+
+Students:
+
+INSERT INTO Student (Name, Surname, DateOfBirth)
+VALUES 
+('Mark', 'Splinter', '2002-01-01'),
+('John', 'Doe', '2002-01-02'),
+('Ann', 'Hath', '2002-01-03'),
+('Simon', 'Garfunkel', '2002-01-04'),
+('Tim', 'Robinson', '2002-01-05'),
+('Cam', 'Pritchet', '2002-01-06'),
+('Ray', 'Roentgen', '2002-01-07'),
+('Arthur', 'Allen', '2002-01-08'),
+('Robert', 'Graysmith', '2002-01-09');
+
+
+
+///---///---///
+
+Departments:
+
+INSERT INTO Department (Name, City, Address)
+VALUES 
+('MIF', 'Vilnius', 'Naugarduko g. 39'),
+('GMF', 'Vilnius', 'Sauletekio g. 14'),
+('FSF', 'Vilnius', 'Universiteto g. 8');
+
+
+///---///---///
+
+
+Lectures:
+
+INSERT INTO Lecture (Name, Department)
+VALUES 
+('Science of cells', 'GMF'),
+('Philosophy', 'FSF'),
+('Math', 'MIF'),
+('Chemistry', 'GMF'),
+('Sociology', 'FSF'),
+('Discrete math', 'MIF'),
+('Microbiology', 'GMF'),
+('Inscurances', 'FSF'),
+('Cryptology', 'MIF'),
+('Advanced chemistry', 'GMF'),
+('Ancient philosophy', 'FSF'),
+('Data science', 'MIF');
+
+
+//Created DB on Azure, but doesnt work
